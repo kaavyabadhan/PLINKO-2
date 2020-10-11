@@ -86,12 +86,11 @@ function draw() {
     // particles.push(new Particle(random(width/2-30, width/2+30), 10,10));
      //score++;
    //}
-
-
  
-  for (var j = 0; j < particles.length; j++) {
-   
-     particles[j].display();
+   if(frameCount % 30 === 0){
+    particle = new Particle(random(130, 400), 0, 7, random(0, 360));
+    particles.push(particle);
+  }
    }
    for (var k = 0; k < divisions.length; k++) {
      
